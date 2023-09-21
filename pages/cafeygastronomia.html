@@ -1,0 +1,104 @@
+<!-- Código HTML de la tercer página hermana, Café y Gatronomía: Maridajes y Postres -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Café y Gatronomía: Maridajes y Postres</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!-- Enlaza CSS bootstrap -->
+
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Enlaza el archivo CSS --> 
+
+    <!-- Típografía del título -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap" rel="stylesheet">
+
+    <!-- Típografía del subítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Típografía del contenido -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Bricolage+Grotesque:opsz,wght@10..48,300&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../src/logomarca.png" type="image/x-icon">
+    <!-- "type" indica el tipo MIME del recurso, que en este caso es "image/x-icon" para indicar que es un archivo de icono. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Metaetiqueta responsive viewport -->
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <header class="encabezado"> <!-- Encabezado -->
+                <img src="../src/logomarca.png" class="logo" alt="Logotipo de la página">
+                <h1>Hoy Visitamos</h1>
+            </header>
+        </div>
+
+        <div class="row">
+            <main>
+                <!-- Acá se muestra el título de la temática de esta página: Café y Gatronomía: Maridajes y Postres, a continuación una imagen y un texto descriptivo de esta sección -->
+                <h3 id="tituloCafeYGastro">Café y Gatronomía: Maridajes y Postres</h3>
+                <div class="contenidoGeneral">
+                    <div class="imagenGeneral"> <!-- Imagen de apoyo a la temática -->
+                        <img src="../src/tsunami.jpg" class="imgRutasDelCafe" alt="Imagen donde se muestra una taza de chocolate caliente">
+                    </div>
+                    <div class="textoGeneral"> <!-- Texto descriptivo de la temática -->
+                        <article>Acá habrá texto cuando sea definido.</article>
+                    </div>
+                </div>
+
+                <div class="gridColumnas">
+                    <div class="gridColumnaContent">
+                        <img src="../src/budindechocolate.jpg" class="imgOpcion" alt="Imagen donde se muestra un budín">
+                        <p>Texto de la opción 1.</p>
+                    </div>
+                    <div class="gridColumnaContent">
+                        <img src="../src/magdalenas.jpg" class="imgOpcion" alt="Imagen donde se muestran muffins">
+                        <p>Texto de la opción 2.</p>
+                    </div>
+                    <div class="gridColumnaContent">
+                        <img src="../src/budindefrutilla.jpg" class="imgOpcion" alt="Imagen donde se muestran frutillas sobre una torta">
+                        <p>Texto de la opción 3.</p>
+                    </div>
+                </div>
+
+                <div class="gridGrilla">
+                    <div class="gridSubtitulo">
+                        <h5 id="tituloCentrado">Recetas complementarias</h5> <!-- Sección de recetas, se muestran recetas desde videos de youtube -->
+                    </div>
+                    <div class="girdVideos"> <!-- Los videos quedan todos centrados -->
+                        <div class="gridVideo">
+                            <iframe width="440" height="215" src="https://www.youtube.com/embed/0IRilKlXAOI?si=8XGppQXt-Rsh6akm&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="gridVideo">
+                            <iframe width="440" height="215" src="https://www.youtube.com/embed/3hA5yrzkgIQ?si=mmXemAVo2Q8O-o0R&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="gridVideo">
+                            <iframe width="440" height="215" src="https://www.youtube.com/embed/-OP92XdZqBg?si=3FIMb9rbASs-F8U7&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="row">
+             <footer class="redesSociales"> <!-- Pie de página con redes sociales -->
+                <ul class="redesLista">
+                    <li><a href="#" class="redSocial">Instagram</a></li>
+                    <li><a href="#" class="redSocial">TikTok</a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js" integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn" crossorigin="anonymous"></script> <!-- Enlaza Popper bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> <!-- Enlaza JS bootstrap -->
+</body>
+</html>

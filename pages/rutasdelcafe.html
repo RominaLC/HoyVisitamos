@@ -1,0 +1,104 @@
+<!-- Código HTML de la primera página hermana, Rutas del Café: Recorriendo Montevideo -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rutas del Café: Recorriendo Montevideo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!-- Enlaza CSS bootstrap -->
+    
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Enlaza el archivo CSS -->
+
+    <!-- Típografía del título -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap" rel="stylesheet">
+
+    <!-- Típografía del subítulo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Típografía del contenido -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Bricolage+Grotesque:opsz,wght@10..48,300&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../src/logomarca.png" type="image/x-icon">
+    <!-- "type" indica el tipo MIME del recurso, que en este caso es "image/x-icon" para indicar que es un archivo de icono. --> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Metaetiqueta responsive viewport -->
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <header class="encabezado"> <!-- Encabezado -->
+                <img src="../src/logomarca.png" class="logo" alt="Logotipo de la página">
+                <h1>Hoy Visitamos</h1>
+            </header>            
+        </div>
+
+        <div class="row">
+            <!-- Acá se muestra el título de la temática de esta página: Rutas del Café: Recorriendo Montevideo, a continuación un texto descriptivo de esta sección y una imagen -->>
+            <main>
+                <h3 id="tituloRutas">Rutas del Café: Recorriendo Montevideo</h3>
+                <div class="contenidoGeneral">
+                    <div class="textoGeneral">
+                        <article>Acá aparecerá un texto relativo a la temática cuando lo tenga definido.</article>
+                    </div>
+                    <div class="imagenGeneral"> <!-- Imagen de apoyo a la temática -->
+                        <img src="../src/macoco.jpg" class="imgRutasDelCafe" alt="Imagen donde se muestra una taza de chocolate caliente">
+                    </div>
+                </div>
+
+                <h4 id="tituloRutas">Los cuatro barrios de Montevideo con más movimiento cafetero</h4>
+                <div class="gridBarrios">
+                    <div class="mapaIzq"> <!-- Mapa de barrio 1 -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26170.194307740592!2d-56.17956818028094!3d-34.92465732479687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f819e0be26dff%3A0x5721a12a2943bc00!2sPunta%20Carretas%2C%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1693162430483!5m2!1ses-419!2suy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                    </div>
+                    <div class="textoDescriptivo"> <!-- Texto de barrio 1 -->
+                        <p>Acá aparecerá un texto relativo a la temática cuando lo tenga definido.</p>
+                    </div>
+
+                    <div class="textoDescriptivoIzq"> <!-- Texto de barrio 2 -->
+                        <p>Acá aparecerá un texto relativo a la temática cuando lo tenga definido.</p>
+                    </div>
+                    <div class="mapa"> <!-- Mapa de barrio 2 -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26174.87361530883!2d-56.18726780578103!3d-34.909982726604355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f810da5ba5265%3A0x7e2c48069abb0e84!2sPocitos%2C%2011300%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1693163399570!5m2!1ses-419!2suy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                    </div>
+
+                    <div class="mapaIzq"> <!-- Mapa de barrio 3 -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6543.666050255408!2d-56.18277948272974!3d-34.91063957788193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81b7db8c0371%3A0xe22fe40f04c80b07!2sPalermo%2C%2011200%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1693163597646!5m2!1ses-419!2suy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="textoDescriptivo"> <!-- Texto de barrio 3 -->
+                        <p>Acá aparecerá un texto relativo a la temática cuando lo tenga definido.</p>
+                    </div>
+                    
+                    <div class="textoDescriptivoIzq"> <!-- Texto de barrio 4 -->
+                        <p>Acá aparecerá un texto relativo a la temática cuando lo tenga definido.</p>
+                    </div>
+                    <div class="mapa"> <!-- Mapa de barrio 4 -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26183.09253791359!2d-56.075152370393816!3d-34.88419463023977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f8668f57f7c21%3A0x90410130e1f9f3e6!2sCarrasco%2C%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1693163632341!5m2!1ses-419!2suy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </main> 
+        </div>
+
+        <div class="row">
+            <footer class="redesSociales"> <!-- Pie de página con redes sociales -->
+                <ul class="redesLista">
+                    <li><a href="#" class="redSocial">Instagram</a></li>
+                    <li><a href="#" class="redSocial">TikTok</a></li>
+                </ul>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js" integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn" crossorigin="anonymous"></script> <!-- Enlaza Popper bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> <!-- Enlaza JS bootstrap -->
+</body>
+</html>
