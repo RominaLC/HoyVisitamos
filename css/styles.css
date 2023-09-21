@@ -28,6 +28,7 @@ h1 {
     color: saddlebrown; /* Color del texto */
     font-size: 350%; /* Tamaño de fuente */
     display: inline-flex; /* Mostrar en línea y permitir flexibilidad */
+    font-weight: bold;
 }
 
 /* Subtítulos */
@@ -49,6 +50,7 @@ h3 {
 h4 {
     font-size: 150%;
     margin: 2%;
+    font-weight: bold;
 }
 
 h5, h6 {
@@ -388,7 +390,7 @@ p, article {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #f0dcb7; /* Color según si se posa el mouse */
+    background-color: #f0dcb7b6; /* Color según si se posa el mouse */
     color: white;
     opacity: 0;
     transition: opacity 0.3s; /* Demora en la transición */
