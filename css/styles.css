@@ -512,7 +512,7 @@ p, article {
         display: flex; /* Cambia el contenedor principal a flexbox */
         flex-direction: column; /* Cambia la dirección del flujo a columna */
         align-items: center; /* Centra horizontalmente las imágenes */
-        width: 50%; /* Limita el ancho del contenedor al 50% de la pantalla */
+        width: 70%; /* Limita el ancho del contenedor al 50% de la pantalla */
         margin: 0 auto; /* Centra el contenedor horizontalmente */
         margin-top: 2%;
         margin-bottom: 5%;
