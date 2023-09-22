@@ -523,6 +523,11 @@ p, article {
         height: auto; /* Permite que la altura se ajuste automáticamente */
         margin-bottom: 1%; /* Agrega margen inferior para separar las imágenes */
     }
+
+    h6 {
+        font-size: 500%;
+        display: inline;
+    }
 }
 
 
