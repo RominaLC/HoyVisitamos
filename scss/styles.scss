@@ -1,0 +1,559 @@
+/* ---------------- Variables ---------------- */
+
+$ColorBase:#f0dcb7; /* Var, color principal de la web */
+$FuenteSubtitulos:'Playfair Display', serif;
+$FuentePrimaria:'Bricolage Grotesque', sans-serif;
+
+
+@mixin Dimensiones ($Alto, $Ancho){
+    height: $Alto;
+    width: $Ancho;
+}
+
+/* ---------------- Estilo general ---------------- */
+body {
+    /*background-color: #f2f2f2;*/
+    margin: 0; /* Elimina espaciados no deseados */
+    padding: 0; /* Elimina espaciados no deseados */
+
+    /* ---------------- Estilo de fuentes ---------------- */
+
+    /* Subtítulos */
+    h2, h6, h3, h4, h5 {
+        font-family: $FuenteSubtitulos;
+        color: saddlebrown;
+    }
+
+    h2 {
+        font-size: 130%;
+        text-align: center; /* Centrar el texto */
+    }
+
+    h3 {
+        font-size: 200%;
+        margin-top: 2%; /* Agregamos un margen superior para separar el título */
+    }
+
+    h4 {
+        font-size: 150%;
+        margin: 2%;
+        font-weight: bold;
+    }
+
+    h5, h6 {
+        font-size: 150%;
+    }
+
+    #tituloTop5, #tituloRutas, #tituloCultura, #tituloCafeYGastro, #tituloEventos, #textoCultura {
+        margin-left: 2%;
+    }
+
+    #tituloCentrado {
+        text-align: center;
+    }
+
+    #tituloEventos {
+        display: block;
+    }
+}
+
+/* Títulos */
+h1 {
+    font-family: $FuentePrimaria; /* Tipo de fuente */
+    color: saddlebrown; /* Color del texto */
+    font-size: 350vw; /* Tamaño de fuente */
+    display: inline-flex; /* Mostrar en línea y permitir flexibilidad */
+    font-weight: bold;
+}
+
+body::before {
+    content: "";
+    background-image: url('../src/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza la página */
+    background-position: center; /* Centra la imagen en el fondo */
+    position: fixed; /* Fija el pseudo-elemento en su lugar */
+    top: 0;
+    left: 0;
+    @include Dimensiones(100%,100%);
+    z-index: -1; /* Coloca el pseudo-elemento detrás de todos los elementos */
+    opacity: 0.5; /* Opacidad de la imagen de fondo */
+}
+
+footer {
+    overflow-x: hidden;
+}
+
+/* ---------------- Contenido ---------------- */
+p, article {
+    font-family: 'ABeeZee', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-size: 130%;
+    display: inline;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column; /* Apilar el contenido verticalmente */
+    align-items: flex-start; /* Alinear el contenido a la izquierda */
+}
+
+.contenido, p {
+    margin: 0; /* Eliminar el margen del párrafo */
+}
+
+.contenidoGeneral, .barrio {
+    display: flex; /* Contenedor flexible */
+    padding: 1%;
+}
+
+.textoGeneral {
+    flex: 1; /* Ocupa el espacio restante en el contenedor */
+    padding-right: 2%; /* Espacio entre el texto y la imagen */
+}
+
+/* ---------------- Grids ---------------- */
+/* INDEX: */
+/* Para la sección de Contenido de Interés en index*/
+.gridContenidoDeInteres {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1%;
+    justify-content: center;
+}
+
+/* Para la sección de Top 5 Cafeterías en index */
+.gridTop5 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2%;
+    max-height: 500px; /* Establece un alto máximo antes de que aparezca la barra de desplazamiento */
+    overflow-y: scroll; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+}
+
+/* Rutas del café*/
+.gridBarrios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1%;
+    grid-row-gap: 3%;
+    grid-auto-rows: minmax(200px, auto);
+    margin: 0 1%;
+    align-items: stretch;
+}
+
+.mapaIzq {
+    grid-column: 1/2;
+}
+
+.mapa {
+    grid-column: 3/4;
+}
+
+.textoDescriptivo {
+    grid-column: 2/4;
+}
+
+.textoDescriptivoIzq {
+    grid-column: 1/3;
+}
+
+/*Eventos del mundo cafetero*/
+.gridTabla {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por fila */
+    gap: 1%;
+    grid-row-gap: 3%;
+    grid-auto-rows: minmax(200px, auto);
+    margin: 0 1%;
+    align-items: stretch;
+}
+  
+.tablon {
+    background-color: #f1d49d;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Evita que el contenido se desborde del tablon */
+}
+  
+.gridTablon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 1%; /* Espacio entre columnas */
+}
+  
+.gridImagen, .gridMaps, .gridDescripcion {
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    max-width: 100%; /* Asegura que el contenido no supere el ancho del tablon */
+    max-height: 100%; /* Asegura que el contenido no supere la altura del tablon */
+    overflow: hidden; /* Evita que el contenido se desborde del tablon */
+}
+  
+.imagenEventos {
+    @include Dimensiones(auto,100%);
+}
+  
+.tablon:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+    background-color: #e9c581;
+}
+
+/*Café y gastronomía*/
+.gridColumnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: stretch; /* Hace que todas las columnas tengan la misma altura */
+}
+
+.gridColumnaContent {
+    background-color: #f1d49d;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50px; /* Añade un borde redondeado */
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Agrega sombreado */
+}
+
+.gridColumnaContent:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+    background-color: #e9c581;
+}
+
+/* Estilo para el contenedor principal */
+.gridGrilla {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 2%; /* Espacio entre elementos */
+    padding: 2%;
+    max-width: 100%; /* Establece un ancho máximo para el contenedor */
+    margin-left: auto; /* Centra horizontalmente el grid */
+    margin-right: auto;
+}
+
+/* Estilo para el subtitulo */
+.gridSubtitulo {
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilo para los videos */
+.girdVideos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    grid-column: auto;
+    gap: 0.5%; /* Espacio entre videos */
+}
+
+/* Estilo para cada video */
+.gridVideo {
+    text-align: center; /* Centra el contenido horizontalmente */
+
+    iframe {
+        @include Dimensiones(auto,100%);
+    }
+}
+
+/* Estilo para el título centrado */
+#tituloCentrado {
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* ---------------- Imágenes ---------------- */
+.logo {
+    width: 8%; /* Ajustar el ancho */
+}
+
+.imagenPrincipal {
+    @include Dimensiones(auto,100vw);
+    display: block; /* Evita márgenes no deseados */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.imagenCafeteria {
+    @include Dimensiones(auto,130px);
+    margin-top: 9px;
+    justify-content: center;
+    border-radius: 50px; /* Añade un borde redondeado */
+}
+
+.imagenPrincipalContainer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+.imagenGeneral {
+    max-width: 50%; /* Ajusta el tamaño máximo del contenedor de la imagen */
+    margin: 1%;
+}
+
+.imgRutasDelCafe {
+    width: 25vw;
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    border-radius: 20%; /* Añade un borde redondeado */
+}
+
+.imgCafeYGastr {
+    width: 30vw;
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    border-radius: 100%; /* Añade un borde redondeado */
+}
+
+.imagenesTop5 {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las imágenes se envuelvan en una nueva línea */
+    align-items: center; /* Centra verticalmente las imágenes */
+}
+
+.imgGaleria {
+    @include Dimensiones(auto,25vw);
+}
+
+.galeria, .gridVideos {
+    display: flex; /* Habilitar el modelo de caja flexible */
+    justify-content: center;
+    margin: 1%;
+}
+
+.celdaImagenDentro {
+    max-width: 100%;
+    max-height: 100%;
+    @include Dimensiones(auto,auto);
+}
+
+/* ---------------- Elementos ---------------- */
+.encabezado {
+    background-color: $ColorBase;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Agrega sombreado */
+    z-index: 1; /* Establece un índice z alto para estar por encima de las cajas */
+    padding: 10px; /* Agregamos un espacio interno para separar la imagen del texto */
+    display: flex; /* Aplicamos un modelo de caja flexible */
+    justify-content: space-between;
+    align-items: center; /* Centramos verticalmente los elementos */
+}
+
+.caja {
+    background-color: $ColorBase; /* Color de fondo */
+    border: #e9c581;
+    padding: 1%;
+    display: inline-flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+    margin-right: 1%;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la intensidad de la sombra */
+    border-radius: 20px; /* Añade un borde redondeado */
+}
+
+.caja:hover {
+    opacity: 0.6; /* Valor de opacidad */
+}
+
+.cajaInterna {
+    background-color: #f1d49d; /* Cambia el color de fondo */
+    display: flex; /* Habilitar el modelo de caja flexible */
+    justify-content: space-between;
+    padding: 1%;
+    align-items: flex-start; /* Centrar verticalmente el contenido */
+    border-radius: 20px; /* Añade un borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la intensidad de la sombra */
+}
+
+.cajaInterna, h4 {
+    color: #333;
+    flex: 1; /* Ocupar el espacio restante para el texto */
+    margin-right: 2%; /* Margen entre el texto y las imágenes */
+    margin-bottom: 2%; /* Agregamos un margen inferior para separar las cajas internas */
+    align-items: flex-start; /* Alinea el contenido en la parte superior */
+}
+
+.cajaInterna:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+}
+
+.cajaTop5 {
+    padding: 2%;
+    @include Dimensiones(70vw,90vw);
+    margin: auto;
+}
+
+.navegacion {
+    text-decoration: none; /* Elimina el subrayado */
+    text-align: center; /* Centra el texto */
+    display: block; /* Asegura que todo el área de la caja sea clickeable */
+    padding: 10%; /* Añade espacio alrededor del texto */
+}
+
+.contenedorTransparente {
+    position: relative;
+    display: inline-block;
+}
+
+.textoSobreImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include Dimensiones(100%,100%);
+    background-color: #f0dcb7b6; /* Color según si se posa el mouse */
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s; /* Demora en la transición */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.contenedorTransparente:hover .textoSobreImg {
+    opacity: 1; /* Cambia la opacidad según si se posa el mouse */
+}
+
+.imgOpcion {
+    border-radius: 50px; /* Añade un borde redondeado */
+    max-width: 100%; /* Tamaño máximo posible */
+    margin-bottom: 10px;
+}
+
+/* ---------------- Redes sociales ---------------- */
+.redesSociales {
+    display: flex;
+    justify-content: center; /* Centra */
+    align-items: center;
+    background-color: $ColorBase;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.redesLista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        margin: 0 10%; /* Espacio entre los enlaces */        
+    }
+}
+
+.redSocial {
+    text-decoration: none;
+    color: #333;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 768px) {
+    /*Letrado*/
+    p, article {
+        font-size: 90%;
+    }
+
+    /* Encabezado */
+    .logo {
+        max-width: 100vw; /* Ajusta el tamaño del logotipo */
+    }
+
+    h1 {
+        font-size: 100vw; /* Ajusta el tamaño del texto del encabezado */
+    }
+
+    /* Imagenes Rutas del Café*/
+    .imgRutasDelCafe {
+        width: 40vw;
+        max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    }
+
+    /* Videos de Youtube en Café y Gastronomía */
+    .girdVideos {
+        grid-template-columns: repeat(1, 1fr); /* Cambia a una sola columna */
+    }
+    .gridVideo {
+        text-align: center; /* Puede ajustar otros estilos aquí */
+    }
+    
+    /* Navegación */
+    .imagenPrincipalContainer {
+        text-align: center;
+    }
+
+    .gridContenidoDeInteres {
+        display: grid; /* Cambiamos a un grid para mostrar en filas y columnas */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
+        grid-gap: 1%; /* Espacio entre las cajas */
+        justify-content: center;
+    }
+
+    .caja {
+        font-size: 16px; /* Tamaño de fuente más pequeño */
+        margin-bottom: 2%;
+        width: 100%; /* Ancho del 100% para ocupar todo el espacio de la celda */
+    }
+
+    /* Sección TOP5 */
+    .cajaTop5 {
+        @include Dimensiones(100vw,100%);
+    }
+
+    .imagenesTop5 img {
+        display: none;
+    }
+
+    .gridTop5 {
+        max-height: 1000px; /* Establece un alto máximo antes de que aparezca la barra de desplazamiento */
+    }
+
+    /*Estilo para las galerías*/
+    .galeria {
+        display: flex; /* Cambia el contenedor principal a flexbox */
+        flex-direction: column; /* Cambia la dirección del flujo a columna */
+        align-items: center; /* Centra horizontalmente las imágenes */
+        width: 70%; /* Limita el ancho del contenedor al 50% de la pantalla */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+
+    .imgGaleria {
+        @include Dimensiones(auto,100%);
+        margin-bottom: 1%; /* Agrega margen inferior para separar las imágenes */
+    }
+
+    h6 {
+        font-size: 500%;
+        display: inline;
+    }
+
+    .imgCafeYGastr {
+        width: 50vw;
+        max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+        border-radius: 100%; /* Añade un borde redondeado */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .tituloCaja {
+        font-size: 18px;
+    }
+
+    .contenido {
+        font-size: 14px;
+    }
+
+    .cajaInterna {
+        box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho */
+    }
+}
+
+/* ---------------- Fin de estilos ---------------- */

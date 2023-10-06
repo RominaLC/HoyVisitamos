@@ -1,548 +1,740 @@
+@charset "UTF-8";
+/* ---------------- Variables ---------------- */
+/* Var, color principal de la web */
 /* ---------------- Estilo general ---------------- */
+/* line 9, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 body {
-    /*background-color: #f2f2f2;*/
-    margin: 0; /* Elimina espaciados no deseados */
-    padding: 0; /* Elimina espaciados no deseados */
+  /*background-color: #f2f2f2;*/
+  margin: 0;
+  /* Elimina espaciados no deseados */
+  padding: 0;
+  /* Elimina espaciados no deseados */
+  /* ---------------- Estilo de fuentes ---------------- */
+  /* Títulos */
+  /* Subtítulos */
 }
 
+/* line 16, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+body h1 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  /* Tipo de fuente */
+  color: saddlebrown;
+  /* Color del texto */
+  font-size: 350%;
+  /* Tamaño de fuente */
+  display: inline-flex;
+  /* Mostrar en línea y permitir flexibilidad */
+  font-weight: bold;
+}
+
+/* line 25, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+body h2, body h6, body h3, body h4, body h5 {
+  font-family: "Playfair Display", serif;
+  color: saddlebrown;
+}
+
+/* line 30, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+body h2 {
+  font-size: 130%;
+  text-align: center;
+  /* Centrar el texto */
+}
+
+/* line 35, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+body h3 {
+  font-size: 200%;
+  margin-top: 2%;
+  /* Agregamos un margen superior para separar el título */
+}
+
+/* line 40, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+body h4 {
+  font-size: 150%;
+  margin: 2%;
+  font-weight: bold;
+}
+
+/* line 46, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+body h5, body h6 {
+  font-size: 150%;
+}
+
+/* line 50, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+body #tituloTop5, body #tituloRutas, body #tituloCultura, body #tituloCafeYGastro, body #tituloEventos, body #textoCultura {
+  margin-left: 2%;
+}
+
+/* line 54, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+body #tituloCentrado {
+  text-align: center;
+}
+
+/* line 58, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+body #tituloEventos {
+  display: block;
+}
+
+/* line 63, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 body::before {
-    content: "";
-    background-image: url('../src/fondo.jpg'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza la página */
-    background-position: center; /* Centra la imagen en el fondo */
-    position: fixed; /* Fija el pseudo-elemento en su lugar */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Coloca el pseudo-elemento detrás de todos los elementos */
-    opacity: 0.5; /* Opacidad de la imagen de fondo */
-}
-
-/* ---------------- Estilo de fuentes ---------------- */
-/* Títulos */
-h1 {
-    font-family: 'Bricolage Grotesque', sans-serif; /* Tipo de fuente */
-    color: saddlebrown; /* Color del texto */
-    font-size: 350%; /* Tamaño de fuente */
-    display: inline-flex; /* Mostrar en línea y permitir flexibilidad */
-    font-weight: bold;
-}
-
-/* Subtítulos */
-h2, h6, h3, h4, h5 {
-    font-family: 'Playfair Display', serif;
-    color: saddlebrown;
-}
-
-h2 {
-    font-size: 130%;
-    text-align: center; /* Centrar el texto */
-}
-
-h3 {
-    font-size: 200%;
-    margin-top: 2%; /* Agregamos un margen superior para separar el título */
-}
-
-h4 {
-    font-size: 150%;
-    margin: 2%;
-    font-weight: bold;
-}
-
-h5, h6 {
-    font-size: 150%;
-}
-
-#tituloTop5, #tituloRutas, #tituloCultura, #tituloCafeYGastro, #tituloEventos, #textoCultura {
-    margin-left: 2%;
-}
-
-#tituloCentrado {
-    text-align: center;
-}
-
-#tituloEventos {
-    display: block;
+  content: "";
+  background-image: url("../src/fondo.jpg");
+  /* Ruta de la imagen de fondo */
+  background-size: cover;
+  /* Ajusta la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-attachment: fixed;
+  /* Mantiene la imagen fija mientras se desplaza la página */
+  background-position: center;
+  /* Centra la imagen en el fondo */
+  position: fixed;
+  /* Fija el pseudo-elemento en su lugar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Coloca el pseudo-elemento detrás de todos los elementos */
+  opacity: 0.5;
+  /* Opacidad de la imagen de fondo */
 }
 
 /* ---------------- Contenido ---------------- */
+/* line 80, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 p, article {
-    font-family: 'ABeeZee', sans-serif;
-    font-family: 'Bricolage Grotesque', sans-serif;
-    font-family: 'Playfair Display', serif;
-    font-size: 130%;
-    display: inline;
+  font-family: 'ABeeZee', sans-serif;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-size: 130%;
+  display: inline;
 }
 
+/* line 88, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .contenido {
-    display: flex;
-    flex-direction: column; /* Apilar el contenido verticalmente */
-    align-items: flex-start; /* Alinear el contenido a la izquierda */
+  display: flex;
+  flex-direction: column;
+  /* Apilar el contenido verticalmente */
+  align-items: flex-start;
+  /* Alinear el contenido a la izquierda */
 }
 
+/* line 94, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .contenido, p {
-    margin: 0; /* Eliminar el margen del párrafo */
+  margin: 0;
+  /* Eliminar el margen del párrafo */
 }
 
+/* line 98, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .contenidoGeneral, .barrio {
-    display: flex; /* Contenedor flexible */
-    padding: 1%;
+  display: flex;
+  /* Contenedor flexible */
+  padding: 1%;
 }
 
+/* line 103, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .textoGeneral {
-    flex: 1; /* Ocupa el espacio restante en el contenedor */
-    padding-right: 2%; /* Espacio entre el texto y la imagen */
+  flex: 1;
+  /* Ocupa el espacio restante en el contenedor */
+  padding-right: 2%;
+  /* Espacio entre el texto y la imagen */
 }
 
 /* ---------------- Grids ---------------- */
 /* INDEX: */
 /* Para la sección de Contenido de Interés en index*/
+/* line 111, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridContenidoDeInteres {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1%;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1%;
+  justify-content: center;
 }
 
 /* Para la sección de Top 5 Cafeterías en index */
+/* line 119, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridTop5 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2%;
-    max-height: 500px; /* Establece un alto máximo antes de que aparezca la barra de desplazamiento */
-    overflow-y: scroll; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2%;
+  max-height: 500px;
+  /* Establece un alto máximo antes de que aparezca la barra de desplazamiento */
+  overflow-y: scroll;
+  /* Agrega una barra de desplazamiento vertical cuando sea necesario */
 }
 
 /* Rutas del café*/
+/* line 128, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridBarrios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1%;
-    grid-row-gap: 3%;
-    grid-auto-rows: minmax(200px, auto);
-    margin: 0 1%;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1%;
+  grid-row-gap: 3%;
+  grid-auto-rows: minmax(200px, auto);
+  margin: 0 1%;
+  align-items: stretch;
 }
 
+/* line 138, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .mapaIzq {
-    grid-column: 1/2;
+  grid-column: 1/2;
 }
 
+/* line 142, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .mapa {
-    grid-column: 3/4;
+  grid-column: 3/4;
 }
 
+/* line 146, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .textoDescriptivo {
-    grid-column: 2/4;
+  grid-column: 2/4;
 }
 
+/* line 150, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .textoDescriptivoIzq {
-    grid-column: 1/3;
+  grid-column: 1/3;
 }
 
 /*Eventos del mundo cafetero*/
+/* line 155, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridTabla {
-    display: grid;
-    grid-template-columns: 1fr; /* Una columna por fila */
-    gap: 1%;
-    grid-row-gap: 3%;
-    grid-auto-rows: minmax(200px, auto);
-    margin: 0 1%;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Una columna por fila */
+  gap: 1%;
+  grid-row-gap: 3%;
+  grid-auto-rows: minmax(200px, auto);
+  margin: 0 1%;
+  align-items: stretch;
 }
-  
+
+/* line 165, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .tablon {
-    background-color: #f1d49d;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Evita que el contenido se desborde del tablon */
+  background-color: #f1d49d;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  /* Evita que el contenido se desborde del tablon */
 }
-  
+
+/* line 172, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridTablon {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-    gap: 1%; /* Espacio entre columnas */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Tres columnas de igual ancho */
+  gap: 1%;
+  /* Espacio entre columnas */
 }
-  
+
+/* line 178, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridImagen, .gridMaps, .gridDescripcion {
-    text-align: center; /* Centra el texto horizontalmente */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    max-width: 100%; /* Asegura que el contenido no supere el ancho del tablon */
-    max-height: 100%; /* Asegura que el contenido no supere la altura del tablon */
-    overflow: hidden; /* Evita que el contenido se desborde del tablon */
+  text-align: center;
+  /* Centra el texto horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  max-width: 100%;
+  /* Asegura que el contenido no supere el ancho del tablon */
+  max-height: 100%;
+  /* Asegura que el contenido no supere la altura del tablon */
+  overflow: hidden;
+  /* Evita que el contenido se desborde del tablon */
 }
-  
+
+/* line 189, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imagenEventos {
-    width: 100%; /* Asegura que la imagen ocupe todo el espacio disponible */
-    height: auto; /* Permite que la imagen mantenga su relación de aspecto */
+  width: 100%;
+  /* Asegura que la imagen ocupe todo el espacio disponible */
+  height: auto;
+  /* Permite que la imagen mantenga su relación de aspecto */
 }
-  
+
+/* line 194, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .tablon:hover {
-    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
-    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
-    background-color: #e9c581;
+  transform: scale(1.02);
+  /* Aumenta ligeramente el tamaño al pasar el mouse */
+  transition: transform 0.3s ease-in-out;
+  /* Suaviza la transición */
+  background-color: #e9c581;
 }
 
 /*Café y gastronomía*/
+/* line 201, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridColumnas {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    align-items: stretch; /* Hace que todas las columnas tengan la misma altura */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  align-items: stretch;
+  /* Hace que todas las columnas tengan la misma altura */
 }
 
+/* line 208, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridColumnaContent {
-    background-color: #f1d49d;
-    padding: 20px;
-    text-align: center;
-    border-radius: 50px; /* Añade un borde redondeado */
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Agrega sombreado */
+  background-color: #f1d49d;
+  padding: 20px;
+  text-align: center;
+  border-radius: 50px;
+  /* Añade un borde redondeado */
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  /* Agrega sombreado */
 }
 
+/* line 216, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridColumnaContent:hover {
-    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
-    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
-    background-color: #e9c581;
+  transform: scale(1.02);
+  /* Aumenta ligeramente el tamaño al pasar el mouse */
+  transition: transform 0.3s ease-in-out;
+  /* Suaviza la transición */
+  background-color: #e9c581;
 }
 
 /* Estilo para el contenedor principal */
+/* line 223, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridGrilla {
-    display: grid;
-    grid-template-columns: 1fr; /* Una sola columna */
-    gap: 2%; /* Espacio entre elementos */
-    padding: 2%;
-    max-width: 100%; /* Establece un ancho máximo para el contenedor */
-    margin-left: auto; /* Centra horizontalmente el grid */
-    margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Una sola columna */
+  gap: 2%;
+  /* Espacio entre elementos */
+  padding: 2%;
+  max-width: 100%;
+  /* Establece un ancho máximo para el contenedor */
+  margin-left: auto;
+  /* Centra horizontalmente el grid */
+  margin-right: auto;
 }
 
 /* Estilo para el subtitulo */
+/* line 234, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridSubtitulo {
-    text-align: center; /* Centra el contenido horizontalmente */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
 }
 
 /* Estilo para los videos */
+/* line 239, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .girdVideos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-    grid-column: auto;
-    gap: 0.5%; /* Espacio entre videos */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Tres columnas de igual ancho */
+  grid-column: auto;
+  gap: 0.5%;
+  /* Espacio entre videos */
 }
 
 /* Estilo para cada video */
+/* line 247, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridVideo {
-    text-align: center; /* Centra el contenido horizontalmente */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
 }
 
+/* line 250, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .gridVideo iframe {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* Estilo para el título centrado */
+/* line 257, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 #tituloCentrado {
-    text-align: center; /* Centra el texto horizontalmente */
+  text-align: center;
+  /* Centra el texto horizontalmente */
 }
 
 /* ---------------- Imágenes ---------------- */
+/* line 262, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .logo {
-    width: 8%; /* Ajustar el ancho */
+  width: 8%;
+  /* Ajustar el ancho */
 }
 
+/* line 266, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imagenPrincipal {
-    width: 100vw; /* Se ajusta a la medida máxima de la pantalla */
-    height: auto;
-    display: block; /* Evita márgenes no deseados */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
+  width: 100vw;
+  /* Se ajusta a la medida máxima de la pantalla */
+  height: auto;
+  display: block;
+  /* Evita márgenes no deseados */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
 }
 
+/* line 273, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imagenCafeteria {
-    width: 130px;
-    height: auto;
-    margin-top: 9px;
-    justify-content: center;
-    border-radius: 50px; /* Añade un borde redondeado */
+  width: 130px;
+  height: auto;
+  margin-top: 9px;
+  justify-content: center;
+  border-radius: 50px;
+  /* Añade un borde redondeado */
 }
 
+/* line 281, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imagenPrincipalContainer {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    margin: auto;
-    margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  margin: auto;
+  margin-bottom: 1%;
 }
 
+/* line 288, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imagenGeneral {
-    max-width: 50%; /* Ajusta el tamaño máximo del contenedor de la imagen */
-    margin: 1%;
+  max-width: 50%;
+  /* Ajusta el tamaño máximo del contenedor de la imagen */
+  margin: 1%;
 }
 
+/* line 293, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imgRutasDelCafe {
-    width: 25vw;
-    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-    border-radius: 20%; /* Añade un borde redondeado */
+  width: 25vw;
+  max-width: 100%;
+  /* Asegura que la imagen no se desborde del contenedor */
+  border-radius: 20%;
+  /* Añade un borde redondeado */
 }
 
+/* line 299, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imgCafeYGastr {
-    width: 25vw;
-    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-    border-radius: 100%; /* Añade un borde redondeado */
+  width: 25vw;
+  max-width: 100%;
+  /* Asegura que la imagen no se desborde del contenedor */
+  border-radius: 100%;
+  /* Añade un borde redondeado */
 }
 
+/* line 305, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imagenesTop5 {
-    display: flex;
-    flex-wrap: nowrap; /* Evita que las imágenes se envuelvan en una nueva línea */
-    align-items: center; /* Centra verticalmente las imágenes */
+  display: flex;
+  flex-wrap: nowrap;
+  /* Evita que las imágenes se envuelvan en una nueva línea */
+  align-items: center;
+  /* Centra verticalmente las imágenes */
 }
 
+/* line 311, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imgGaleria {
-    width: 25vw;
-    height: auto;
+  width: 25vw;
+  height: auto;
 }
 
+/* line 316, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .galeria, .gridVideos {
-    display: flex; /* Habilitar el modelo de caja flexible */
-    justify-content: center;
-    margin: 1%;
+  display: flex;
+  /* Habilitar el modelo de caja flexible */
+  justify-content: center;
+  margin: 1%;
 }
 
+/* line 322, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .celdaImagenDentro {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 /* ---------------- Elementos ---------------- */
+/* line 330, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .encabezado {
-    background-color: #f0dcb7;
-    position: sticky; /* Hace que el elemento te persiga por la página */
-    top: 0;
-    left: 0;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Agrega sombreado */
-    z-index: 1; /* Establece un índice z alto para estar por encima de las cajas */
-    display: flex; /* Aplicamos un modelo de caja flexible */
-    align-items: center; /* Centramos verticalmente los elementos */
-    padding: 10px; /* Agregamos un espacio interno para separar la imagen del texto */
+  background-color: #f0dcb7;
+  position: sticky;
+  /* Hace que el elemento te persiga por la página */
+  top: 0;
+  left: 0;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  /* Agrega sombreado */
+  z-index: 1;
+  /* Establece un índice z alto para estar por encima de las cajas */
+  display: flex;
+  /* Aplicamos un modelo de caja flexible */
+  align-items: center;
+  /* Centramos verticalmente los elementos */
+  padding: 10px;
+  /* Agregamos un espacio interno para separar la imagen del texto */
 }
 
+/* line 342, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .caja {
-    background-color: #f0dcb7; /* Color de fondo */
-    border: #e9c581;
-    padding: 1%;
-    display: inline-flex;
-    align-items: center; /* Centrar verticalmente el contenido */
-    margin-right: 1%;
-    transition: opacity 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la intensidad de la sombra */
-    border-radius: 20px; /* Añade un borde redondeado */
+  background-color: #f0dcb7;
+  /* Color de fondo */
+  border: #e9c581;
+  padding: 1%;
+  display: inline-flex;
+  align-items: center;
+  /* Centrar verticalmente el contenido */
+  margin-right: 1%;
+  transition: opacity 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Aumenta la intensidad de la sombra */
+  border-radius: 20px;
+  /* Añade un borde redondeado */
 }
 
+/* line 354, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .caja:hover {
-    opacity: 0.6; /* Valor de opacidad */
+  opacity: 0.6;
+  /* Valor de opacidad */
 }
 
+/* line 358, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .cajaInterna {
-    background-color: #f1d49d; /* Cambia el color de fondo */
-    display: flex; /* Habilitar el modelo de caja flexible */
-    justify-content: space-between;
-    padding: 1%;
-    align-items: flex-start; /* Centrar verticalmente el contenido */
-    border-radius: 20px; /* Añade un borde redondeado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la intensidad de la sombra */
+  background-color: #f1d49d;
+  /* Cambia el color de fondo */
+  display: flex;
+  /* Habilitar el modelo de caja flexible */
+  justify-content: space-between;
+  padding: 1%;
+  align-items: flex-start;
+  /* Centrar verticalmente el contenido */
+  border-radius: 20px;
+  /* Añade un borde redondeado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Aumenta la intensidad de la sombra */
 }
 
+/* line 368, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .cajaInterna, h4 {
-    color: #333;
-    flex: 1; /* Ocupar el espacio restante para el texto */
-    margin-right: 2%; /* Margen entre el texto y las imágenes */
-    margin-bottom: 2%; /* Agregamos un margen inferior para separar las cajas internas */
-    align-items: flex-start; /* Alinea el contenido en la parte superior */
+  color: #333;
+  flex: 1;
+  /* Ocupar el espacio restante para el texto */
+  margin-right: 2%;
+  /* Margen entre el texto y las imágenes */
+  margin-bottom: 2%;
+  /* Agregamos un margen inferior para separar las cajas internas */
+  align-items: flex-start;
+  /* Alinea el contenido en la parte superior */
 }
 
+/* line 376, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .cajaInterna:hover {
-    transform: scale(1.02); /* Aumenta ligeramente el tamaño al pasar el mouse */
-    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+  transform: scale(1.02);
+  /* Aumenta ligeramente el tamaño al pasar el mouse */
+  transition: transform 0.3s ease-in-out;
+  /* Suaviza la transición */
 }
 
+/* line 381, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .cajaTop5 {
-    padding: 2%;
-    width: 90vw;
-    height: 70vw;
-    margin: auto;
+  padding: 2%;
+  width: 90vw;
+  height: 70vw;
+  margin: auto;
 }
 
+/* line 388, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .navegacion {
-    text-decoration: none; /* Elimina el subrayado */
-    text-align: center; /* Centra el texto */
-    display: block; /* Asegura que todo el área de la caja sea clickeable */
-    padding: 10%; /* Añade espacio alrededor del texto */
+  text-decoration: none;
+  /* Elimina el subrayado */
+  text-align: center;
+  /* Centra el texto */
+  display: block;
+  /* Asegura que todo el área de la caja sea clickeable */
+  padding: 10%;
+  /* Añade espacio alrededor del texto */
 }
 
+/* line 395, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .contenedorTransparente {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
+/* line 400, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .textoSobreImg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f0dcb7b6; /* Color según si se posa el mouse */
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s; /* Demora en la transición */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0dcb7b6;
+  /* Color según si se posa el mouse */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+  /* Demora en la transición */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1vw;
 }
 
+/* line 417, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .contenedorTransparente:hover .textoSobreImg {
-    opacity: 1; /* Cambia la opacidad según si se posa el mouse */
+  opacity: 1;
+  /* Cambia la opacidad según si se posa el mouse */
 }
 
+/* line 421, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .imgOpcion {
-    border-radius: 50px; /* Añade un borde redondeado */
-    max-width: 100%; /* Tamaño máximo posible */
-    margin-bottom: 10px;
+  border-radius: 50px;
+  /* Añade un borde redondeado */
+  max-width: 100%;
+  /* Tamaño máximo posible */
+  margin-bottom: 10px;
 }
 
 /* ---------------- Redes sociales ---------------- */
+/* line 428, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .redesSociales {
-    display: flex;
-    justify-content: center; /* Centra */
-    align-items: center;
-    background-color: #f0dcb7;
-    padding: 1%;
-    margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  /* Centra */
+  align-items: center;
+  background-color: #f0dcb7;
+  padding: 1%;
+  margin-top: 2%;
 }
 
+/* line 437, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .redesLista {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* line 445, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .redesLista li {
-    margin: 0 10%; /* Espacio entre los enlaces */
+  margin: 0 10%;
+  /* Espacio entre los enlaces */
 }
 
+/* line 450, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
 .redSocial {
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
 }
 
 /* ---------------- Responsive ---------------- */
-
 @media (max-width: 768px) {
-    /*Letrado*/
-    p, article {
-        font-size: 90%;
-    }
-
-    /* Encabezado */
-    .logo {
-        max-width: 100px; /* Ajusta el tamaño del logotipo */
-    }
-    h1 {
-        font-size: 18px; /* Ajusta el tamaño del texto del encabezado */
-    }
-
-    /* Imagenes Rutas del Café*/
-    .imgRutasDelCafe {
-        width: 40vw;
-        max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-    }
-
-    /* Videos de Youtube en Café y Gastronomía */
-    .girdVideos {
-        grid-template-columns: repeat(1, 1fr); /* Cambia a una sola columna */
-    }
-    .gridVideo {
-        text-align: center; /* Puede ajustar otros estilos aquí */
-    }
-    
-    /* Navegación */
-    .imagenPrincipalContainer {
-        text-align: center;
-    }
-
-    .gridContenidoDeInteres {
-        display: grid; /* Cambiamos a un grid para mostrar en filas y columnas */
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
-        grid-gap: 1%; /* Espacio entre las cajas */
-        justify-content: center;
-    }
-
-    .caja {
-        font-size: 16px; /* Tamaño de fuente más pequeño */
-        margin-bottom: 2%;
-        width: 100%; /* Ancho del 100% para ocupar todo el espacio de la celda */
-    }
-
-    /* Sección TOP5 */
-    .cajaTop5 {
-        width: 100%; /* Ocupa todo el ancho en pantallas más pequeñas */
-        height: 100vw;
-    }
-
-    .imagenesTop5 img {
-        display: none;
-    }
-
-    .gridTop5 {
-        max-height: 1000px; /* Establece un alto máximo antes de que aparezca la barra de desplazamiento */
-    }
-
-    /*Estilo para las galerías*/
-    .galeria {
-        display: flex; /* Cambia el contenedor principal a flexbox */
-        flex-direction: column; /* Cambia la dirección del flujo a columna */
-        align-items: center; /* Centra horizontalmente las imágenes */
-        width: 70%; /* Limita el ancho del contenedor al 50% de la pantalla */
-        margin: 0 auto; /* Centra el contenedor horizontalmente */
-        margin-top: 2%;
-        margin-bottom: 5%;
-    }
-
-    .imgGaleria {
-        width: 100%; /* Ancho del 100% dentro de la columna */
-        height: auto; /* Permite que la altura se ajuste automáticamente */
-        margin-bottom: 1%; /* Agrega margen inferior para separar las imágenes */
-    }
-
-    h6 {
-        font-size: 500%;
-        display: inline;
-    }
+  /*Letrado*/
+  /* line 459, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  p, article {
+    font-size: 90%;
+  }
+  /* Encabezado */
+  /* line 464, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .logo {
+    max-width: 100px;
+    /* Ajusta el tamaño del logotipo */
+  }
+  /* line 467, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  h1 {
+    font-size: 18px;
+    /* Ajusta el tamaño del texto del encabezado */
+  }
+  /* Imagenes Rutas del Café*/
+  /* line 472, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .imgRutasDelCafe {
+    width: 40vw;
+    max-width: 100%;
+    /* Asegura que la imagen no se desborde del contenedor */
+  }
+  /* Videos de Youtube en Café y Gastronomía */
+  /* line 478, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .girdVideos {
+    grid-template-columns: repeat(1, 1fr);
+    /* Cambia a una sola columna */
+  }
+  /* line 481, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .gridVideo {
+    text-align: center;
+    /* Puede ajustar otros estilos aquí */
+  }
+  /* Navegación */
+  /* line 486, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .imagenPrincipalContainer {
+    text-align: center;
+  }
+  /* line 490, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .gridContenidoDeInteres {
+    display: grid;
+    /* Cambiamos a un grid para mostrar en filas y columnas */
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos columnas por fila */
+    grid-gap: 1%;
+    /* Espacio entre las cajas */
+    justify-content: center;
+  }
+  /* line 497, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .caja {
+    font-size: 16px;
+    /* Tamaño de fuente más pequeño */
+    margin-bottom: 2%;
+    width: 100%;
+    /* Ancho del 100% para ocupar todo el espacio de la celda */
+  }
+  /* Sección TOP5 */
+  /* line 504, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .cajaTop5 {
+    width: 100%;
+    /* Ocupa todo el ancho en pantallas más pequeñas */
+    height: 100vw;
+  }
+  /* line 509, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .imagenesTop5 img {
+    display: none;
+  }
+  /* line 513, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .gridTop5 {
+    max-height: 1000px;
+    /* Establece un alto máximo antes de que aparezca la barra de desplazamiento */
+  }
+  /*Estilo para las galerías*/
+  /* line 518, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .galeria {
+    display: flex;
+    /* Cambia el contenedor principal a flexbox */
+    flex-direction: column;
+    /* Cambia la dirección del flujo a columna */
+    align-items: center;
+    /* Centra horizontalmente las imágenes */
+    width: 70%;
+    /* Limita el ancho del contenedor al 50% de la pantalla */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  /* line 528, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .imgGaleria {
+    width: 100%;
+    /* Ancho del 100% dentro de la columna */
+    height: auto;
+    /* Permite que la altura se ajuste automáticamente */
+    margin-bottom: 1%;
+    /* Agrega margen inferior para separar las imágenes */
+  }
+  /* line 534, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  h6 {
+    font-size: 500%;
+    display: inline;
+  }
 }
 
-
 @media (max-width: 480px) {
-    .tituloCaja {
-        font-size: 18px;
-    }
-
-    .contenido {
-        font-size: 14px;
-    }
-
-    .cajaInterna {
-        box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho */
-    }
+  /* line 542, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .tituloCaja {
+    font-size: 18px;
+  }
+  /* line 546, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .contenido {
+    font-size: 14px;
+  }
+  /* line 550, ../../../../Romina/CODERHOUSE/SegundaPreEntregaCoscia/scss/styles.scss */
+  .cajaInterna {
+    box-sizing: border-box;
+    /* Incluye padding y borde en el cálculo del ancho */
+  }
 }
 
 /* ---------------- Fin de estilos ---------------- */
+
+/*# sourceMappingURL=styles.css.map */
