@@ -102,7 +102,7 @@ p, article {
 }
 
 .contenido, p {
-    margin: 0; /* Eliminar el margen del párrafo */
+    margin: 2%; /* Eliminar el margen del párrafo */
 }
 
 .contenidoGeneral, .barrio {
@@ -138,8 +138,8 @@ p, article {
 .gridBarrios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1%;
-    grid-row-gap: 3%;
+    gap: 3%;
+    grid-row-gap: 7%;
     grid-auto-rows: minmax(200px, auto);
     margin: 0 1%;
     align-items: stretch;
