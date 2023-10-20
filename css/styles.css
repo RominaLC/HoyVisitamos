@@ -85,7 +85,8 @@ p, article {
   flex-direction: column;
   /* Apilar el contenido verticalmente */
   align-items: flex-start;
-  /* Alinear el contenido a la izquierda */ }
+  /* Alinear el contenido a la izquierda */
+  margin: 2%; }
 
 .contenidoGeneral, .barrio {
   display: flex;
@@ -579,7 +580,8 @@ p, article {
   .tituloCaja {
     font-size: 18px; }
   .contenido {
-    font-size: 14px; }
+    font-size: 14px;
+    margin: 2%; }
   .cajaInterna {
     box-sizing: border-box;
     /* Incluye padding y borde en el cálculo del ancho */ } }

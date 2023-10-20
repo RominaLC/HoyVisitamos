@@ -97,6 +97,7 @@ p, article {
     display: flex;
     flex-direction: column; /* Apilar el contenido verticalmente */
     align-items: flex-start; /* Alinear el contenido a la izquierda */
+    margin: 2%;
 }
 
 .contenidoGeneral, .barrio {
@@ -579,6 +580,7 @@ p, article {
 
     .contenido {
         font-size: 14px;
+        margin: 2%;
     }
 
     .cajaInterna {
