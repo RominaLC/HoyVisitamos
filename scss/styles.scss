@@ -15,6 +15,7 @@ body {
     /*background-color: #f2f2f2;*/
     margin: 0; /* Elimina espaciados no deseados */
     padding: 0; /* Elimina espaciados no deseados */
+    overflow-x: auto; /*evitar desplazamieto horizontal*/
 
     /* ---------------- Estilo de fuentes ---------------- */
 
@@ -41,7 +42,7 @@ body {
     }
 
     h5, h6 {
-        font-size: 150%;
+        font-size: 5vw;
     }
 
     #tituloTop5, #tituloRutas, #tituloCultura, #tituloCafeYGastro, #tituloEventos, #textoCultura {
@@ -61,7 +62,7 @@ body {
 h1 {
     font-family: $FuentePrimaria; /* Tipo de fuente */
     color: saddlebrown; /* Color del texto */
-    font-size: 350vw; /* Tamaño de fuente */
+    font-size: 350%; /* Tamaño de fuente */
     display: inline-flex; /* Mostrar en línea y permitir flexibilidad */
     font-weight: bold;
 }
@@ -299,12 +300,16 @@ p, article {
     width: 25vw;
     max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
     border-radius: 20%; /* Añade un borde redondeado */
+    float: right; 
 }
 
 .imgCafeYGastr {
     width: 30vw;
     max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
     border-radius: 100%; /* Añade un borde redondeado */
+    shape-outside: circle();
+    float: left;
+    margin-right: 4%;
 }
 
 .imagenesTop5 {
@@ -392,6 +397,23 @@ p, article {
     padding: 10%; /* Añade espacio alrededor del texto */
 }
 
+.navbar-toggler {
+    display: block;
+}
+
+.navbar-nav .nav-link {
+    max-width: 40vw; /* Ajusta el valor según tu diseño */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    position: absolute;
+    right: 0;
+}
+
 .contenedorTransparente {
     position: relative;
     display: inline-block;
@@ -461,11 +483,11 @@ p, article {
 
     /* Encabezado */
     .logo {
-        max-width: 100vw; /* Ajusta el tamaño del logotipo */
+        max-width: 100px; /* Ajusta el tamaño del logotipo */
     }
 
     h1 {
-        font-size: 100vw; /* Ajusta el tamaño del texto del encabezado */
+        font-size: 8vw; /* Ajusta el tamaño del texto del encabezado */
     }
 
     /* Imagenes Rutas del Café*/
