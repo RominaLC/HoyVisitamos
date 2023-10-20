@@ -11,10 +11,26 @@ $FuentePrimaria:'Bricolage Grotesque', sans-serif;
 }
 
 /* ---------------- Estilo general ---------------- */
+
+body::before {
+    content: "";
+    background-image: url('../src/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza la página */
+    background-position: center; /* Centra la imagen en el fondo */
+    position: fixed; /* Fija el pseudo-elemento en su lugar */
+    top: 0;
+    left: 0;
+    @include Dimensiones(100%,100%);
+    z-index: -1; /* Coloca el pseudo-elemento detrás de todos los elementos */
+    opacity: 0.5; /* Opacidad de la imagen de fondo */
+}
+
 body {
     margin: 0; /* Elimina espaciados no deseados */
     padding: 0; /* Elimina espaciados no deseados */
-    overflow-x: auto; /*evitar desplazamieto horizontal*/
+    overflow-x: hidden; /*evitar desplazamieto horizontal*/
 
     /* ---------------- Estilo de fuentes ---------------- */
 
@@ -65,21 +81,6 @@ h1 {
     font-weight: bold;
 }
 
-body::before {
-    content: "";
-    background-image: url('../src/fondo.jpg'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza la página */
-    background-position: center; /* Centra la imagen en el fondo */
-    position: fixed; /* Fija el pseudo-elemento en su lugar */
-    top: 0;
-    left: 0;
-    @include Dimensiones(100%,100%);
-    z-index: -1; /* Coloca el pseudo-elemento detrás de todos los elementos */
-    opacity: 0.5; /* Opacidad de la imagen de fondo */
-}
-
 footer {
     overflow-x: hidden;
 }
@@ -107,7 +108,6 @@ p, article {
 
 .textoGeneral {
     flex: 1; /* Ocupa el espacio restante en el contenedor */
-    padding-right: 2%; /* Espacio entre el texto y la imagen */
 }
 
 /* ---------------- Grids ---------------- */
@@ -490,6 +490,12 @@ p, article {
 
     h1 {
         font-size: 8vw; /* Ajusta el tamaño del texto del encabezado */
+    }
+
+    .encabezado,h1{
+        margin-right: auto;
+        margin-bottom: 0;
+        align-items: center;
     }
 
     /* Imagenes Rutas del Café*/
