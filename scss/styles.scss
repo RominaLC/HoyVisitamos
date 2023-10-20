@@ -12,7 +12,6 @@ $FuentePrimaria:'Bricolage Grotesque', sans-serif;
 
 /* ---------------- Estilo general ---------------- */
 body {
-    /*background-color: #f2f2f2;*/
     margin: 0; /* Elimina espaciados no deseados */
     padding: 0; /* Elimina espaciados no deseados */
     overflow-x: auto; /*evitar desplazamieto horizontal*/
@@ -31,7 +30,6 @@ body {
     }
 
     h3 {
-        font-size: 200%;
         margin-top: 2%; /* Agregamos un margen superior para separar el título */
     }
 
@@ -101,10 +99,6 @@ p, article {
     align-items: flex-start; /* Alinear el contenido a la izquierda */
 }
 
-.contenido, p {
-    margin: 2%; /* Eliminar el margen del párrafo */
-}
-
 .contenidoGeneral, .barrio {
     display: flex; /* Contenedor flexible */
     padding: 1%;
@@ -140,8 +134,9 @@ p, article {
     grid-template-columns: repeat(3, 1fr);
     gap: 3%;
     grid-row-gap: 7%;
-    grid-auto-rows: minmax(200px, auto);
-    margin: 0 1%;
+    row-gap: normal;
+    grid-auto-rows: minmax(auto, auto);
+    margin: 1%;
     align-items: stretch;
 }
 
@@ -268,7 +263,7 @@ p, article {
 
 /* ---------------- Imágenes ---------------- */
 .logo {
-    width: 8%; /* Ajustar el ancho */
+    width: 10%; /* Ajustar el ancho */
 }
 
 .imagenPrincipal {
@@ -301,6 +296,7 @@ p, article {
     max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
     border-radius: 20%; /* Añade un borde redondeado */
     float: right; 
+    margin: 2%;
 }
 
 .imgCafeYGastr {
@@ -342,7 +338,11 @@ p, article {
     padding: 10px; /* Agregamos un espacio interno para separar la imagen del texto */
     display: flex; /* Aplicamos un modelo de caja flexible */
     justify-content: space-between;
-    align-items: center; /* Centramos verticalmente los elementos */
+    align-items: end; /* Centramos verticalmente los elementos */
+}
+
+.encabezado,h1{
+    margin-right: auto;
 }
 
 .caja {
@@ -479,11 +479,12 @@ p, article {
     /*Letrado*/
     p, article {
         font-size: 90%;
+        margin: auto;
     }
 
     /* Encabezado */
     .logo {
-        max-width: 100px; /* Ajusta el tamaño del logotipo */
+        max-width: 20%; /* Ajusta el tamaño del logotipo */
     }
 
     h1 {
@@ -494,6 +495,7 @@ p, article {
     .imgRutasDelCafe {
         width: 40vw;
         max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+        margin: 2%;
     }
 
     /* Videos de Youtube en Café y Gastronomía */
@@ -560,6 +562,12 @@ p, article {
         width: 50vw;
         max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
         border-radius: 100%; /* Añade un borde redondeado */
+    }
+
+    .gridTablon {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1%; /* Espacio entre columnas */
     }
 }
 

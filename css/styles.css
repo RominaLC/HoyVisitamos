@@ -3,7 +3,6 @@
 /* Var, color principal de la web */
 /* ---------------- Estilo general ---------------- */
 body {
-  /*background-color: #f2f2f2;*/
   margin: 0;
   /* Elimina espaciados no deseados */
   padding: 0;
@@ -20,7 +19,6 @@ body {
     text-align: center;
     /* Centrar el texto */ }
   body h3 {
-    font-size: 200%;
     margin-top: 2%;
     /* Agregamos un margen superior para separar el título */ }
   body h4 {
@@ -89,10 +87,6 @@ p, article {
   align-items: flex-start;
   /* Alinear el contenido a la izquierda */ }
 
-.contenido, p {
-  margin: 2%;
-  /* Eliminar el margen del párrafo */ }
-
 .contenidoGeneral, .barrio {
   display: flex;
   /* Contenedor flexible */
@@ -129,8 +123,9 @@ p, article {
   grid-template-columns: repeat(3, 1fr);
   gap: 3%;
   grid-row-gap: 7%;
-  grid-auto-rows: minmax(200px, auto);
-  margin: 0 1%;
+  row-gap: normal;
+  grid-auto-rows: minmax(auto, auto);
+  margin: 1%;
   align-items: stretch; }
 
 .mapaIzq {
@@ -264,7 +259,7 @@ p, article {
 
 /* ---------------- Imágenes ---------------- */
 .logo {
-  width: 8%;
+  width: 10%;
   /* Ajustar el ancho */ }
 
 .imagenPrincipal {
@@ -301,7 +296,8 @@ p, article {
   /* Asegura que la imagen no se desborde del contenedor */
   border-radius: 20%;
   /* Añade un borde redondeado */
-  float: right; }
+  float: right;
+  margin: 2%; }
 
 .imgCafeYGastr {
   width: 30vw;
@@ -348,8 +344,11 @@ p, article {
   display: flex;
   /* Aplicamos un modelo de caja flexible */
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   /* Centramos verticalmente los elementos */ }
+
+.encabezado, h1 {
+  margin-right: auto; }
 
 .caja {
   background-color: #f0dcb7;
@@ -494,10 +493,11 @@ p, article {
 @media (max-width: 768px) {
   /*Letrado*/
   p, article {
-    font-size: 90%; }
+    font-size: 90%;
+    margin: auto; }
   /* Encabezado */
   .logo {
-    max-width: 100px;
+    max-width: 20%;
     /* Ajusta el tamaño del logotipo */ }
   h1 {
     font-size: 8vw;
@@ -506,7 +506,8 @@ p, article {
   .imgRutasDelCafe {
     width: 40vw;
     max-width: 100%;
-    /* Asegura que la imagen no se desborde del contenedor */ }
+    /* Asegura que la imagen no se desborde del contenedor */
+    margin: 2%; }
   /* Videos de Youtube en Café y Gastronomía */
   .girdVideos {
     grid-template-columns: repeat(1, 1fr);
@@ -567,7 +568,12 @@ p, article {
     max-width: 100%;
     /* Asegura que la imagen no se desborde del contenedor */
     border-radius: 100%;
-    /* Añade un borde redondeado */ } }
+    /* Añade un borde redondeado */ }
+  .gridTablon {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1%;
+    /* Espacio entre columnas */ } }
 
 @media (max-width: 480px) {
   .tituloCaja {
